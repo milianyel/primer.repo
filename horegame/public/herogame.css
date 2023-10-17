@@ -1,0 +1,301 @@
+@import url('https://fonts.googleapis.com/css2?family=Bungee+Spice&family=Poppins:wght@300&family=Press+Start+2P&family=Rammetto+One&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Vina+Sans&display=swap');
+
+* {
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+body {
+    background-image: url("./fondo.jpg");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-color: #070A52;
+    font-family:'Poppins', sans-serif;
+}
+
+.titulo { 
+    display: flex; 
+    font-family: 'Bungee Spice', cursive;
+    text-shadow: 2px 1px 0 black, -2px 0 0; 
+    font-size: 40px; 
+    margin-top: 15px; 
+}
+
+.subtitulo {
+    text-shadow: 2px 2px 0 black, -1px -1px 0 black, -1px -1px 0 black, -1px -1px 0 black;
+    color: white;
+    font-size: 25px;
+    margin: 15px 0px 15px 0px;
+}
+
+#seleccion-personaje {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.botones-de-ataques {
+    display: flex;
+    gap: 8px;
+}
+
+.tarjetas {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    align-items: center;
+    justify-items: center;
+    gap: 13px;
+}
+
+.tarjetas-de-personaje {
+    transition: 0.2s;
+    width: 160px;
+    height: 190px;
+    padding: 10px;
+    border-radius: 25px;
+    border: 5px solid gainsboro;
+    background-color: #FEFFE4;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.tarjetas-de-personaje:hover {
+    transform: translate(-5px);
+    background-color: black;
+}
+
+.tarjetas-de-personaje img {
+    width: 160px;
+    height: 200px
+}
+
+#boton-seleccionar {
+    width: 215px;
+    height: 37px;
+    border-radius: 10px;
+    background: transparent;
+    margin-top: 20px;
+    border: 2px solid white;
+    font-size: 18px;
+    font-family: 'Rammetto One', cursive;
+    color: white;
+    text-shadow: 2px 2px 0 black, -1px -1px 0 black, -1px -1px 0 black, -1px -1px 0 black;
+}
+
+#seleccionar-ataque {
+    flex-direction: column;
+    align-items: center;
+}
+
+.boton-ataque {
+    transition: 0.2s;
+    background-color: #070a52;
+    color: white;
+    border: 2px solid white;
+    border-radius: 25px;
+    padding: 15px;
+    width: 100px;
+    font-family: 'Press Start 2P', cursive;
+    font-size: 14px;
+}
+
+.boton-ataque:hover {
+    transform: translate(-5px);
+}
+
+#mensajes {
+    border: 4px solid gainsboro;
+    width: 390px;
+    background: #FFFDE3;
+    color: black;
+    border-radius: 15px;
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 15px;
+}
+
+#boton-reiniciar {
+    color: #b51615;
+    border: none;
+    background: transparent;
+    font-family: 'Poppins', sans-serif;
+    font-size: 19px;
+    margin-top: 5px;
+}
+
+.diseño-grid {
+    display: grid;
+    grid-template-columns: 170px 170px;
+    grid-gap: 20px;
+    color: white;
+}
+
+.contenedor-jugada {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 7px;
+    border-radius: 15px;
+    border: 1px solid #b9b6b6;
+    margin-top: 18px;
+    background-color: rgba(128, 128, 128, 0.7);
+}
+
+#vidas-jugador , #vidas-enemigo {
+    font-family: 'Press Start 2P', cursive;
+    font-size: 27px;
+}
+
+
+#personaje-jugador , #personaje-enemigo {
+    font-size: 20px;
+    margin-bottom: 5px;
+}
+
+input {
+    display: none;
+}
+
+input:checked + label {
+    background-color: black;
+} 
+
+.foto-elegido {
+    height: 80px;
+    display: flex;
+}
+
+.foto-elegido-reducir {
+    height: 65px;
+}
+
+.letras {
+    font-size: 19px;
+    text-shadow: 2px 2px 0 black, -1px -1px 0 black, -1px -1px 0 black, -1px -1px 0 black;
+}
+
+#contenedor-mapa {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#mapa {
+    border: 3px solid navajowhite;
+    border-radius: 10px;
+}
+
+#contenedor-mapa button {
+    user-select: none;
+    background-color: #070a52;
+    color: white;
+    border-radius: 25px;
+    padding: 2px;
+    width: 75px;
+    font-size: 25px;
+    border: 1px white solid;
+    margin: 1px;
+}
+
+#pagina-principal {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    margin-top: 130px;
+}
+
+#grupo-personajes {
+    width: 300px;
+    height: 320px;
+}
+
+#boton-jugar {
+    width: 125px;
+    height: 40px;
+    border-radius: 10px;
+    background: transparent;
+    border: 2px solid white;
+    font-size: 18px;
+    font-family: 'Rammetto One', cursive;
+    color: white;
+    text-shadow: 2px 2px 0 black, -1px -1px 0 black, -1px -1px 0 black, -1px -1px 0 black;
+}
+
+@media (max-width: 520px) {
+    .titulo {
+        font-size: 28px;
+    }
+
+    .subtitulo {
+        font-size: 20px;
+        margin: 5px;
+    }
+    
+    .botones-de-ataques {
+        flex-direction: column;
+    }
+
+    .tarjetas {
+        display: flex;
+        flex-direction: column;
+        gap: 4px;
+    }
+
+    .tarjetas-de-personaje {
+        width: 134px;
+        height: 145px;
+    }
+
+    .tarjetas-de-personaje img {
+        width: 145px;
+        height: 115px;
+    }
+
+    #boton-seleccionar {
+        width: 190px;
+        height: 30px;
+        margin-top: 5px;
+    }
+
+    .boton-ataque {
+        padding: 8px;
+        border-radius: 10px;
+    }
+
+    #mensajes {
+        width: 290px;
+        text-align: center;
+        padding: 7px;
+    }
+
+    .diseño-grid {
+        grid-template-columns: 145px 145px;
+        grid-gap: 10px;
+    }
+}
+
+@media (max-width: 250px) {
+    #contenedor-mapa div {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #grupo-personajes {
+        width: 240px;
+        height: 270px;
+    }
+}
